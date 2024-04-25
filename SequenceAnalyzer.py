@@ -52,7 +52,7 @@ parser.add_argument("-c","--cutoff",  default=0.1, help="Cutoff for fraction of 
 args = parser.parse_args()
 
 file_in = args.in_file
-cutoff = args.cutoff
+cutoff = float(args.cutoff)
 
 df = parse_input(file_in) #Input text file to pandas dataframe
 df.pct_covered_bases = df.pct_covered_bases.astype(float) #Change string to float for covered bases
